@@ -1,4 +1,211 @@
 @import url(./reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
-@import url(./layout.css);
-@import url(./header.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+
+/* layout */
+:root {
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorPrincipal: #fa573a;
+    --colorSecundario: #21242e;
+    --fontSize: 1rem;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+}
+
+/* fin layout */
+
+/*header */
+
+header .nav-top {
+    background-color: var(--colorSecundario);
+    padding: 1.250rem 0;
+
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    color: var(--colorPrincipal);
+    text-decoration: none;
+}
+
+header .nav-top i {
+    font-size: 150%;
+}
+
+header .nav-top span {
+    display: none;
+    color: white;
+    font-size: 110%;
+}
+
+
+header nav {
+    padding: 1.25rem;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav .logo {
+    max-width: 6.25rem;
+}
+
+header .hamburguesa {
+    cursor: pointer;
+    width: 1.875rem;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625rem;
+}
+
+header .menu {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.750rem;
+}
+
+header .menu a {
+    display: block;
+    padding: 1.25rem;
+    border-bottom: 1px solid #aaa;
+    text-decoration: none;
+    color: #aaa;
+}
+
+header .menu li:last-child a {
+    border-bottom: 0px;
+}
+
+header .menu :is(.active, a:hover) {
+    color: var(--colorPrincipal);
+}
+
+/* fin header */
+
+/* hero */
+
+.hero {
+    height: 85vh;
+    background-image: url(../images/fondo.jpg);
+    background-color: #959595;
+    background-blend-mode: multiply;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    padding: 1.250rem;
+}
+
+.hero h1 {
+    font-family: var(--fuentetitulos);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero h2 {
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px #21242e;
+    padding: 1.25rem 0rem;
+}
+
+.hero h3 {
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.2rem;
+}
+
+.hero .nav {
+    display: inline-block;
+    margin: 10px 0px;
+    background-color: var(--colorPrincipal);
+
+}
+
+.hero nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1.250rem;
+    font-family: var(--fuentePrincipal);
+    display: inline-block;
+
+}
+
+/* fin hero */
+
+
+
+
+/* mediaqueries */
+
+@media(min-width:48rem) {
+    header .nav-top span {
+        display: inline;
+    }
+
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:62.750rem) {
+    header .hamburguesa {
+        display: none;
+    }
+
+    header .menu {
+        width: auto;
+        text-align: right;
+        padding-top: 0rem;
+    }
+
+    header .menu li {
+        display: inline-block;
+    }
+
+    header .menu a {
+        padding: 0.5rem 0rem 0.5rem 1rem;
+        border-bottom: 0px;
+
+    }
+}
