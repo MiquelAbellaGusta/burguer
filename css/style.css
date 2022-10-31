@@ -479,11 +479,11 @@ main aside {
 }
 
 main aside nav {
-    margin: 0rem 3rem;
+    margin: 0rem 5rem;
 }
 
 main aside article {
-    margin: 0rem 3rem;
+    margin: 0rem 5rem;
 }
 
 main aside article h3 {
@@ -510,6 +510,61 @@ main aside .underline hr {
     border-color: var(--colorPrincipal);
 }
 
+main aside article p {
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+}
+
+main .gridmenu {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+
+}
+
+main .gridmenu article {
+    margin: 0rem 5rem;
+
+}
+
+.gridmenu .contenido {
+    position: relative;
+}
+
+.gridmenu .contenido div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.gridmenu .contenido div p {
+    color: white;
+    font-size: var(--fontSize);
+    font-family: var(--fuentePrincipal);
+}
+
+.gridmenu .contenido div a {
+    padding: 20px 0px 40px 0px;
+}
+
+.gridmenu h3 {
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    padding: 20px 0px;
+    font-size: 1.2rem;
+}
+
+.gridmenu .contenido .price {
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: 10%;
+}
 
 /*fin menu*/
 
