@@ -316,23 +316,33 @@ main #ourservices article div .fas {
 }
 
 #aboutus figure {
-    margin: 1.250rem auto;
+    transform: scale(0.9);
+
 }
 
 #aboutus figure .frame {
     border: 4px solid var(--colorPrincipal);
+    transform: rotateZ(10deg);
+    transition: 0.5s;
+}
+
+#aboutus figure .frame img {
+    transform: rotateZ(-10deg);
+    transition: 0.5s;
 }
 
 
 
-#aboutus figure .frame:hover {
+#aboutus figure:hover :is(.frame, img) {
     transform: rotate(0deg);
 
 }
 
+
 #aboutus h3 {
     font-weight: 700;
     font-size: 110%;
+    margin-top: 2.5rem;
 
 }
 
@@ -605,6 +615,11 @@ main .gridmenu article {
 
     #aboutus .grid {
         grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    #aboutus figure {
+        transform: scale(0.85);
 
     }
 
